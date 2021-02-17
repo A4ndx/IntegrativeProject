@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: #181f26;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.ControlVAccionBanco">
+   <children>
+      <AnchorPane layoutX="150.0" layoutY="50.0" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #f1f1f1;">
+         <effect>
+            <DropShadow height="40.0" radius="19.5" spread="0.07" width="40.0" />
+         </effect>
+         <children>
+            <VBox prefHeight="485.0" prefWidth="400.0" spacing="3.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox alignment="TOP_RIGHT" prefHeight="57.0" prefWidth="350.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#loadVBienvenida" prefHeight="35.0" prefWidth="130.0" text="Regresar" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="30.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Acción a realizar">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="3.0" left="5.0" right="5.0" top="-5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="370.0" prefWidth="350.0" spacing="10.0">
+                     <children>
+                        <Label text="¿Que acción desea realizar en el banco?">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="35.0" prefWidth="200.0" spacing="10.0">
+                           <children>
+                              <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" smooth="false">
+                                 <image>
+                                    <Image url="@../Images/icons8_Cash_in_Hand_64px.png" />
+                                 </image>
+                              </ImageView>
+                              <Button mnemonicParsing="false" onAction="#loadCaja" prefHeight="35.0" prefWidth="220.0" text="Retiros y consignaciones" />
+                           </children>
+                        </HBox>
+                        <Pane prefHeight="250.0" prefWidth="320.0">
+                           <children>
+                              <VBox alignment="TOP_CENTER" prefHeight="250.0" prefWidth="320.0" spacing="10.0">
+                                 <children>
+                                    <Label text="Consulta con asesor">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <HBox alignment="CENTER" prefHeight="35.0" prefWidth="200.0" spacing="10.0">
+                                       <children>
+                                          <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" smooth="false">
+                                             <image>
+                                                <Image url="@../Images/icons8_Registration_64px.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Button mnemonicParsing="false" onAction="#loadAsesorApert" prefHeight="35.0" prefWidth="220.0" text="Apertura de cuentas" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="35.0" prefWidth="200.0" spacing="10.0">
+                                       <children>
+                                          <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" smooth="false">
+                                             <image>
+                                                <Image url="@../Images/icons8_Credit_Card_64px.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Button mnemonicParsing="false" onAction="#loadAsesorCredito" prefHeight="35.0" prefWidth="220.0" text="Solicitud de credito" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="35.0" prefWidth="200.0" spacing="10.0">
+                                       <children>
+                                          <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" smooth="false">
+                                             <image>
+                                                <Image url="@../Images/icons8_Stocks_64px.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Button mnemonicParsing="false" onAction="#loadAsesorCDT" prefHeight="35.0" prefWidth="220.0" text="CDT" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="35.0" prefWidth="200.0" spacing="10.0">
+                                       <children>
+                                          <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" smooth="false">
+                                             <image>
+                                                <Image url="@../Images/icons8_Debt_64px.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Button mnemonicParsing="false" onAction="#loadAsesorCartera" prefHeight="35.0" prefWidth="220.0" text="Compra de cartera" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </Pane>
+                     </children>
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />
+               </padding>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

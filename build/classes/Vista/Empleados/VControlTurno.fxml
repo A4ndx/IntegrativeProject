@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="620.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.ControlVControlTurno">
+   <children>
+      <VBox layoutY="7.0" prefHeight="615.0" prefWidth="511.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="143.0" prefWidth="800.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="136.0" prefWidth="730.0">
+                     <children>
+                        <Label text="Turno:">
+                           <font>
+                              <Font size="65.0" />
+                           </font>
+                           <padding>
+                              <Insets right="15.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="tTipoUsu" text="NN" textFill="#f44141">
+                           <font>
+                              <Font size="65.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="tTurno" text="-00">
+                           <font>
+                              <Font size="65.0" />
+                           </font>
+                           <padding>
+                              <Insets left="3.0" right="3.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="40.0" top="20.0" />
+                     </HBox.margin>
+                  </HBox>
+               </children>
+            </HBox>
+            <VBox alignment="CENTER_LEFT" prefHeight="320.0" prefWidth="471.0" spacing="20.0">
+               <children>
+                  <Label text="Tipo de modulo">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="cbModulo" prefWidth="200.0" />
+                  <Label text="Numero de modulo">
+                     <font>
+                        <Font name="Segoe UI" size="15.0" />
+                     </font>
+                  </Label>
+                  <Spinner fx:id="sNumero" maxHeight="30.0" maxWidth="200.0" />
+                  <Button mnemonicParsing="false" onAction="#getNextTurno" prefHeight="40.0" prefWidth="200.0" text="Siguiente turno">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin></Button>
+                  <Label fx:id="tError" textFill="RED">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Label>
+               </children>
+               <VBox.margin>
+                  <Insets left="40.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets top="-20.0" />
+               </padding>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

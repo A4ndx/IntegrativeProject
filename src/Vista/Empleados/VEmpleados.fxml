@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="620.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.ControlVEmpleados">
+   <children>
+      <VBox prefHeight="620.0" prefWidth="200.0" spacing="30.0" style="-fx-background-color: #dddddd;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="bControl" mnemonicParsing="false" onAction="#loadVControl" onKeyPressed="#loadVControl" prefHeight="50.0" prefWidth="200.0" text="Control del turno">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="bRegistro" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#loadVRegistro" onKeyPressed="#loadVRegistro" prefHeight="50.0" prefWidth="200.0" text="Registro de cuentas">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="bReporte" layoutX="10.0" layoutY="60.0" mnemonicParsing="false" onAction="#loadVReporte" prefHeight="50.0" prefWidth="200.0" text="Reporte de turnos">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/logo.png" />
+               </image>
+               <VBox.margin>
+                  <Insets top="120.0" />
+               </VBox.margin>
+            </ImageView>
+         </children>
+         <padding>
+            <Insets top="30.0" />
+         </padding>
+         <effect>
+            <DropShadow color="#515151" height="0.0" radius="2.25" spread="0.03" width="11.0" />
+         </effect>
+      </VBox>
+      <AnchorPane fx:id="rootPane" layoutX="200.0" prefHeight="620.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane fx:id="apLogin" prefHeight="628.0" prefWidth="1008.0" style="-fx-background-color: rgb(214, 214, 214,0.5);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane layoutX="313.0" layoutY="171.0" prefHeight="279.0" prefWidth="375.0" style="-fx-background-color: #FFFF;" AnchorPane.bottomAnchor="170.0" AnchorPane.leftAnchor="313.0" AnchorPane.rightAnchor="312.0" AnchorPane.topAnchor="171.0">
+               <effect>
+                  <DropShadow color="#4a4a4a" />
+               </effect>
+               <children>
+                  <VBox alignment="CENTER" prefHeight="279.0" prefWidth="375.0" spacing="15.0">
+                     <children>
+                        <Label text="Login">
+                           <font>
+                              <Font name="Segoe UI Semibold" size="35.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tUserName" promptText="Username" />
+                        <PasswordField fx:id="tPassword" promptText="Password" />
+                        <Button fx:id="bLogin" mnemonicParsing="false" onAction="#login" onKeyPressed="#login" prefHeight="30.0" prefWidth="100.0" text="SIGN IN" />
+                        <Label fx:id="tError" textFill="RED" />
+                     </children>
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

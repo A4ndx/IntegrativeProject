@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.ControlVPrincipal">
+   <children>
+      <HBox alignment="CENTER" prefHeight="85.0" prefWidth="650.0" spacing="25.0" style="-fx-background-color: #234584;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="74.0" fitWidth="314.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/HEADERLOGO.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="20.0" right="320.0" />
+               </HBox.margin>
+            </ImageView>
+            <Label fx:id="tFecha" alignment="CENTER" contentDisplay="TOP" text="01/01/2000" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="tHora" alignment="CENTER" contentDisplay="TOP" layoutX="925.0" layoutY="36.0" prefHeight="34.0" prefWidth="100.0" text="00:00:00" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets right="40.0" />
+         </padding></HBox>
+      <HBox alignment="CENTER" layoutY="81.0" prefHeight="620.0" prefWidth="1000.0" spacing="30.0" style="-fx-background-color: #2955a0;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="85.0">
+         <children>
+            <TableView fx:id="tableTurnos" centerShape="false" maxHeight="-Infinity" minHeight="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="520.0" prefWidth="480.0" stylesheets="@../Modelo/tableTurnos.css">
+              <columns>
+                <TableColumn fx:id="turno" prefWidth="205.0" resizable="false" text="TURNO" />
+                  <TableColumn fx:id="modulo" editable="false" prefWidth="275.0" resizable="false" text="MODULO" />
+              </columns>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TableView>
+            <ImageView fx:id="imageAd" fitHeight="520.0" fitWidth="420.0" pickOnBounds="true">
+               <image>
+                  <Image url="@Images/Anuncio.gif" />
+               </image>
+            </ImageView>
+         </children>
+         <padding>
+            <Insets bottom="25.0" left="35.0" right="35.0" top="25.0" />
+         </padding>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="620.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.ControlVRegistro">
+   <children>
+      <VBox layoutX="14.0" layoutY="14.0" prefHeight="590.0" prefWidth="774.0" spacing="10.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0" spacing="15.0">
+               <children>
+                  <Label alignment="CENTER" text="Registro de cuentas">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="30.0" />
+                     </font>
+                     <effect>
+                        <Glow level="0.07" />
+                     </effect>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="30.0" top="20.0" />
+               </VBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+            <Label text="Nombre:">
+               <VBox.margin>
+                  <Insets left="30.0" right="350.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Segoe UI" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tNombre">
+               <VBox.margin>
+                  <Insets left="30.0" right="450.0" />
+               </VBox.margin>
+            </TextField>
+            <Label text="Apellidos:">
+               <VBox.margin>
+                  <Insets left="30.0" right="350.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Segoe UI" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tApellidos">
+               <VBox.margin>
+                  <Insets left="30.0" right="450.0" />
+               </VBox.margin>
+            </TextField>
+            <Label layoutX="40.0" layoutY="179.0" text="Identificación:">
+               <font>
+                  <Font name="Segoe UI" size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="30.0" right="350.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="tId" layoutX="40.0" layoutY="208.0">
+               <VBox.margin>
+                  <Insets left="30.0" right="450.0" />
+               </VBox.margin>
+            </TextField>
+            <Label text="Correo electronico:">
+               <VBox.margin>
+                  <Insets left="30.0" right="350.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Segoe UI" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tCorreo">
+               <VBox.margin>
+                  <Insets left="30.0" right="450.0" />
+               </VBox.margin>
+            </TextField>
+            <Label text="PIN:">
+               <VBox.margin>
+                  <Insets left="30.0" right="350.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Segoe UI" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tPin">
+               <VBox.margin>
+                  <Insets left="30.0" right="450.0" />
+               </VBox.margin>
+            </TextField>
+            <Label text="Fecha de nacimiento:">
+               <VBox.margin>
+                  <Insets left="30.0" right="350.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Segoe UI" size="15.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="dpFechaNac" prefHeight="25.0" prefWidth="417.0">
+               <VBox.margin>
+                  <Insets left="30.0" right="450.0" />
+               </VBox.margin>
+            </DatePicker>
+            <HBox alignment="CENTER_LEFT" prefHeight="56.0" prefWidth="770.0" spacing="15.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#registrar" prefHeight="35.0" prefWidth="130.0" text="Registrar">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+                  <Label fx:id="tMensaje" prefHeight="28.0" prefWidth="550.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" top="15.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
